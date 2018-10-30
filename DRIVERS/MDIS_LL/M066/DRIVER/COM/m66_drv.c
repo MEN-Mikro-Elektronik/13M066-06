@@ -14,85 +14,25 @@
  *     Required: none
  *     \switches _ONE_NAMESPACE_PER_DRIVER_
  */
- /*-------------------------------[ History ]---------------------------------
- *
- * $Log: m66_drv.c,v $
- * Revision 1.16  2010/09/21 17:43:04  ts
- * R: channel and code mismatch in Prototype declaration of GetStat/SetStat
- * M: corrected copy/paste error
- *
- * Revision 1.15  2009/06/24 11:06:25  CRuff
- * R: 1.Porting to MDIS5
- * M: 1. changed according to MDIS Porting Guide 0.5
- *
- * Revision 1.14  2009/05/26 14:46:53  ufranke
- * R: compile time error for E500 PPC with mac_mem.h 1.18
- * M: fixed
- *
- * Revision 1.13  2008/09/23 11:18:58  ufranke
- * R: improved code maintainability
- * M: M_set/getstat stay 32bit variables as was
- *    and usage of 64bit variables only on the important places
- *
- * Revision 1.12  2008/09/17 17:59:15  CKauntz
- * R1: No doxygen documentation
- * R2: No 64 bit support
- * M1: Changed comments to doxygen documentations
- * M2: Changed SetStat and GetStat to support 64 bit OS
- *
- * Revision 1.11  2008/09/09 16:04:27  ufranke
- * R: diab compiler warning
- * M: cosmetics
- *
- * Revision 1.10  2005/06/21 12:51:08  UFranke
- * fixed
- *  - NULL pointer access in M66_HwBlockRead()
- *
- * Revision 1.9  2005/05/09 11:12:35  dpfeuffer
- * - M66_Irq(): interrupt detection now prior to actions
- * - M66_HwBlockRead(): edge detection fixed
- * - M66_SetStat(M66_SIG_EDGE_OCCURRED/M66_SIG_CLR_EDGE_OCCURRED) bugfix:
- * OSS_SigCreate() was called with forbidden IRQ priority
- * - M66_Set/GetStat(): uninitialized outbuf handle removed
- * - M66_HANDLE: unused 'outbuf' and 'nbrOfChannels' params removed
- *
- * Revision 1.8  2004/08/30 15:43:31  dpfeuffer
- * - minor modifications for MDIS4/2004 conformity
- * - OSS_IrqMask/OSS_IrqUnMask replaced with OSS_IrqMaskR/OSS_IrqRestore
- * - M66_SetStat(M66_EDGE_MASK): bugfix
- *
- * Revision 1.7  2003/07/25 15:07:43  UFranke
- * cosmetics
- *
- * Revision 1.6  2001/11/12 10:18:32  Schmidt
- * D302/A302 support added, nodoc markers added
- *
- * Revision 1.5  2000/08/09 14:09:14  kp
- * - IdFuncTbl table now in llHdl. Statics not allow in LL drivers!
- * - Made all entry functions static.
- * - Support swapped variant
- *
- * Revision 1.4  1998/07/29 15:13:01  see
- * M66_Init: ID_CHECK default is now 1
- * M66_Getstat: M_LL_ID_SIZE added
- * M66_Getstat: M_LL_BLK_ID_DATA changed (template style)
- * some defs renamed (template style)
- * some defs added (template style)
- *
- * Revision 1.3  1998/07/15 15:36:24  Franke
- * changed to MDIS 4.1 debug handling
- *         M66_Irq() sends only installed signals
- *
- * Revision 1.2  1998/03/02 14:46:50  franke
- * irq triggering channel stored only if edge occurred
- * cosmetics
- *
- * Revision 1.1  1998/02/19 14:39:29  Schmidt
- * Added by mcvs
- *
+ /*
  *---------------------------------------------------------------------------
  * (c) Copyright 1995..2008 by MEN mikro elektronik GmbH, Nuremberg, Germany
  ****************************************************************************/
+/*
+* This program is free software: you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation, either version 2 of the License, or
+* (at your option) any later version.
+*
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU General Public License for more details.
+*
+* You should have received a copy of the GNU General Public License
+* along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
 static const char IdentString[]="M66 - m66 low level driver: $Id: m66_drv.c,v 1.16 2010/09/21 17:43:04 ts Exp $";
 
 #include <MEN/men_typs.h>   /* system dependend definitions   */

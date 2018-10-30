@@ -12,42 +12,23 @@
  *     Required: -
  *     Switches: -
  *
- *-------------------------------[ History ]---------------------------------
- *
- * $Log: m66_perf.c,v $
- * Revision 1.9  2010/03/26 14:55:30  dpfeuffer
- * R: revised during MDIS5 for Windows performance measurement
- * M: time measurement improved
- *
- * Revision 1.8  2009/06/24 11:09:44  CRuff
- * R: new MDIS path type MDIS_PATH
- * M: changed type of filedescriptor for M_open to MDIS_PATH
- *
- * Revision 1.7  2009/03/30 14:30:17  ufranke
- * cosmetics
- *
- * Revision 1.6  2008/09/15 15:18:00  ufranke
- * R: diab compiler warnings
- * M: cosmetics
- *
- * Revision 1.5  2008/01/18 14:28:33  ufranke
- * cosmetics
- *
- * Revision 1.4  2004/08/30 15:43:56  dpfeuffer
- * minor modifications for MDIS4/2004 conformity
- *
- * Revision 1.3  2000/08/29 14:31:31  Schmidt
- * program options added, new style
- *
- * Revision 1.2  2000/08/09 14:09:25  kp
- * cosmetics
- *
- * Revision 1.1  2000/04/11 13:25:38  Schmidt
- * Initial Revision
- *
  *---------------------------------------------------------------------------
  * (c) Copyright 2000..2009 by MEN mikro elektronik GmbH, Nuernberg, Germany
  ****************************************************************************/
+/*
+* This program is free software: you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation, either version 2 of the License, or
+* (at your option) any later version.
+*
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU General Public License for more details.
+*
+* You should have received a copy of the GNU General Public License
+* along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
 
 static char *RCSid="$Id: m66_perf.c,v 1.9 2010/03/26 14:55:30 dpfeuffer Exp $\n";
 
