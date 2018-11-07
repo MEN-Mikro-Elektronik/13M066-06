@@ -13,19 +13,7 @@
  *     \switches: VXWORKS
  *
  */
-/*-------------------------------[ History ]---------------------------------
- *
- * $Log: m66_ll.c,v $
- * Revision 1.3  2008/09/17 17:59:20  CKauntz
- * R: No doxygen documentation
- * M: Changed comments to doxygen documentations
- *
- * Revision 1.2  1999/03/19 11:50:09  Franke
- * changed -  MDIS 4.1 debug handling
- *
- * Revision 1.1  1998/03/03 11:59:50  franke
- * initial
- *
+/*
  *---------------------------------------------------------------------------
  * (c) Copyright 1998..2008 by MEN mikro elektronik GmbH, Nuernberg, Germany
  ****************************************************************************/

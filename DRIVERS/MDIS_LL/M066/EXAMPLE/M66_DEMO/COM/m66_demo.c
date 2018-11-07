@@ -13,53 +13,7 @@
  *     Required: -
  *     \switches NO_MAIN_FUNC
  */
-/*-------------------------------[ History ]---------------------------------
- *
- * $Log: m66_demo.c,v $
- * Revision 1.11  2009/07/06 13:31:23  CRuff
- * R: defines U_INT32_OR_64, INT32_OR_64 and MDIS_PATH not available in older
- *    mdis versions
- * M: add defines if not already done
- *
- * Revision 1.10  2009/06/24 11:06:56  CRuff
- * R: new MDIS path type MDIS_PATH
- * M: changed type of filedescriptor for M_open to MDIS_PATH
- *
- * Revision 1.9  2009/03/30 14:31:04  ufranke
- * cosmetics
- *
- * Revision 1.8  2008/09/17 17:59:22  CKauntz
- * R1: No doxygen documentation
- * R2: No 64 bit support
- * M1: Changed comments to doxygen documentations
- * M2: Changed devHdl to INT32_OR_64 to support 64 bit OS
- *
- * Revision 1.7  2008/09/15 15:05:08  ufranke
- * R: diab compiler warnings
- * M: cosmetics
- *
- * Revision 1.6  2008/01/18 14:27:19  ufranke
- * cosmetics
- *
- * Revision 1.5  2003/07/25 15:09:54  UFranke
- * cosmetics
- *
- * Revision 1.4  1998/07/29 15:13:14  see
- * data[] type changed from int8 to u_int8
- * loop count reduced from 100 to 10
- * "PRESS ^C" message remove
- * M_close return value check was wrong
- *
- * Revision 1.3  1998/07/20 10:37:38  Schmidt
- * VXWORKS define removed, NO_MAIN_FUNC define for main() added,
- * cosmetics
- *
- * Revision 1.2  1998/03/04 11:05:27  Schmidt
- * change run = 50 --> run = 100
- *
- * Revision 1.1  1998/02/20 15:07:30  Schmidt
- * Added by mcvs
- * 
+/*
  *---------------------------------------------------------------------------
  * (c) Copyright 1998..2009 by MEN mikro elektronik GmbH, Nuremberg, Germany
  ****************************************************************************/
