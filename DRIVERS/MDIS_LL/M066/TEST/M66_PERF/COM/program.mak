@@ -7,21 +7,21 @@
 #    Description: makefile descriptor file for common
 #                 modules MDIS 4.x   e.g. low level driver
 #
-#---------------------------------[ History ]---------------------------------
-#
-#   $Log: program.mak,v $
-#   Revision 1.3  2004/08/30 15:43:58  dpfeuffer
-#   minor modifications for MDIS4/2004 conformity
-#
-#   Revision 1.2  2000/08/29 14:31:34  Schmidt
-#   usr_utl added
-#
-#   Revision 1.1  2000/04/11 13:25:40  Schmidt
-#   Initial Revision
-#
 #-----------------------------------------------------------------------------
-#   (c) Copyright 2000 by MEN mikro elektronik GmbH, Nuernberg, Germany
+#   Copyright (c) 2000-2019, MEN Mikro Elektronik GmbH
 #*****************************************************************************
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 2 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 MAK_NAME=m66_perf
 
