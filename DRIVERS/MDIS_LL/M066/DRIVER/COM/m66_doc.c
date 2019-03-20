@@ -184,9 +184,6 @@
     \subsection m66_simp  Simple example for using the driver
     m66_simp.c (see example section)
 
-    \subsection m66_ll  Simple example for using the driver
-    m66_ll.c (see example section)
-
     \subsection m66_demo  Simple example for using the driver
     m66_demo.c (see example section)
     Demo application for the M66 M-Module with demo adapter
@@ -209,7 +206,6 @@
 
 /** \example m66_simp.c */
 /** \example m66_demo.c */
-/** \example m66_ll.c */
 /** \example m66_min.dsc */
 /** \example m66_max.dsc */
 /** \example m66_sw_min.dsc */
