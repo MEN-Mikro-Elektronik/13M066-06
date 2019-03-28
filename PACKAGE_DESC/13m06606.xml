@@ -1,163 +1,163 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- edited with XMLSPY v5 rel. 4 U (http://www.xmlspy.com) by Klaus Popp (MEN Mikro Elektronik GmbH) -->
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="packagedesc.xsd">
-    <name>13m06606</name>
-    <description>MDIS5 driver package for MEN M66 M-Module</description>
-    <date>2013-11-08</date>
-    <revision>2.22</revision>
-    <docroot>DRIVERS/MDIS_LL/M066/DOC/main.html</docroot>
-    <modellist>
-        <model>
-            <hwname>M66</hwname>
-            <description>32 Binary I/Os</description>
-            <devtype>MDIS</devtype>
-            <autoid>
-                <mmoduleid>0x53460042</mmoduleid>
-            </autoid>
-            <busif>M-Module</busif>
-        </model>
-        <model>
-            <hwname>M66_D302</hwname>
-            <description>32 Binary I/Os</description>
-            <devtype>MDIS</devtype>
-            <bbslot>
-                <bbismodel>D302</bbismodel>
-            </bbslot>
-        </model>
-    </modellist>
-    <settinglist>
-        <setting>
-            <name>ID_CHECK</name>
-            <description>Define wether M-Module ID-PROM is checked</description>
-            <type>U_INT32</type>
-            <defaultvalue>1</defaultvalue>
-            <choises>
-                <choise>
-                    <value>1</value>
-                    <description>enable</description>
-                </choise>
-                <choise>
-                    <value>0</value>
-                    <description>disable -- ignore IDPROM</description>
-                </choise>
-            </choises>
-        </setting>
-        <settingsubdir>
-            <name>RD_BUF</name>
-            <setting>
-                <name>MODE</name>
-                <description>read buffer mode</description>
-                <type>U_INT32</type>
-                <defaultvalue>0</defaultvalue>
-                <choises>
-                    <choise>
-                        <value>0</value>
-                        <description>USER controlled buffer</description>
-                    </choise>
-                    <choise>
-                        <value>1</value>
-                        <description>MDIS controlled current buffer</description>
-                    </choise>
-                    <choise>
-                        <value>2</value>
-                        <description>MDIS controlled ring buffer</description>
-                    </choise>
-                    <choise>
-                        <value>3</value>
-                        <description>MDIS controlled ring buffer overwrite</description>
-                    </choise>
-                </choises>
-            </setting>
-            <setting>
-                <name>SIZE</name>
-                <description>read buffer size in bytes</description>
-                <type>U_INT32</type>
-                <defaultvalue>512</defaultvalue>
-            </setting>
-            <setting>
-                <name>TIMEOUT</name>
-                <description>read buffer timeout in ms</description>
-                <type>U_INT32</type>
-                <defaultvalue>1000</defaultvalue>
-            </setting>
-            <setting>
-                <name>HIGHWATER</name>
-                <description>read buffer high water mark</description>
-                <type>U_INT32</type>
-                <defaultvalue>512</defaultvalue>
-            </setting>
-        </settingsubdir>
-        <settingsubdir rangestart="0" rangeend="31">
-            <name>CHANNEL_</name>
-            <setting>
-                <name>IRQ_ENABLE</name>
-                <description>channel interrupt mode</description>
-                <type>U_INT32</type>
-                <defaultvalue>0</defaultvalue>
-                <choises>
-                    <choise>
-                        <value>0</value>
-                        <description>none</description>
-                    </choise>
-                    <choise>
-                        <value>1</value>
-                        <description>rising edge</description>
-                    </choise>
-                    <choise>
-                        <value>2</value>
-                        <description>falling edge</description>
-                    </choise>
-                    <choise>
-                        <value>3</value>
-                        <description>any edge</description>
-                    </choise>
-                </choises>
-            </setting>
-        </settingsubdir>
-        <debugsetting mbuf="true"/>
-    </settinglist>
-    <swmodulelist>
-        <swmodule>
-            <name>m66</name>
-            <description>Driver for M66</description>
-            <type>Low Level Driver</type>
-            <makefilepath>M066/DRIVER/COM/driver.mak</makefilepath>
-        </swmodule>
-        <swmodule>
-            <name>m66_simp</name>
-            <description>Simple test of the m66 mdis driver</description>
-            <type>Driver Specific Tool</type>
-            <makefilepath>M066/EXAMPLE/M66_SIMP/COM/program.mak</makefilepath>
-        </swmodule>
-        <swmodule>
-            <name>m66_demo</name>
-            <description>Demonstration program for M66 with demo adapter</description>
-            <type>Driver Specific Tool</type>
-            <makefilepath>M066/EXAMPLE/M66_DEMO/COM/program.mak</makefilepath>
-        </swmodule>
-        <swmodule internal="true">
-            <name>m66_endless</name>
-            <description>Endless test of the m66 mdis driver</description>
-            <type>Driver Specific Tool</type>
-            <makefilepath>M066/TEST/M66_ENDLESS/COM/program.mak</makefilepath>
-        </swmodule>
-        <swmodule internal="true">
-            <name>m66_main</name>
-            <description>Test of the m66_drv.c m66_drv.h</description>
-            <type>Driver Specific Tool</type>
-            <makefilepath>M066/TEST/M66_MAIN/COM/program.mak</makefilepath>
-        </swmodule>
-        <swmodule>
-            <name>m66_perf</name>
-            <description>Performance test for m66 mdis driver</description>
-            <type>Driver Specific Tool</type>
-            <makefilepath>M066/TEST/M66_PERF/COM/program.mak</makefilepath>
-        </swmodule>
-        <swmodule internal="true">
-            <name>m66_irq</name>
-            <description>Interrupt handling test for m66 mdis driver</description>
-            <type>Driver Specific Tool</type>
-            <makefilepath>M066/TEST/M66_IRQ/COM/program.mak</makefilepath>
-        </swmodule>
-    </swmodulelist>
+	<name>13m06606</name>
+	<description>MDIS5 driver package for MEN M66 M-Module</description>
+	<date>2013-11-08</date>
+	<revision>2.22</revision>
+	<docroot>DRIVERS/MDIS_LL/M066/DOC/main.html</docroot>
+	<modellist>
+		<model>
+			<hwname>M66</hwname>
+			<description>32 Binary I/Os</description>
+			<devtype>MDIS</devtype>
+			<autoid>
+				<mmoduleid>0x53460042</mmoduleid>
+			</autoid>
+			<busif>M-Module</busif>
+		</model>
+		<model>
+			<hwname>M66_D302</hwname>
+			<description>32 Binary I/Os</description>
+			<devtype>MDIS</devtype>
+			<bbslot>
+				<bbismodel>D302</bbismodel>
+			</bbslot>
+		</model>
+	</modellist>
+	<settinglist>
+		<setting>
+			<name>ID_CHECK</name>
+			<description>Define wether M-Module ID-PROM is checked</description>
+			<type>U_INT32</type>
+			<defaultvalue>1</defaultvalue>
+			<choises>
+				<choise>
+					<value>1</value>
+					<description>enable</description>
+				</choise>
+				<choise>
+					<value>0</value>
+					<description>disable -- ignore IDPROM</description>
+				</choise>
+			</choises>
+		</setting>
+		<settingsubdir>
+			<name>RD_BUF</name>
+			<setting>
+				<name>MODE</name>
+				<description>read buffer mode</description>
+				<type>U_INT32</type>
+				<defaultvalue>0</defaultvalue>
+				<choises>
+					<choise>
+						<value>0</value>
+						<description>USER controlled buffer</description>
+					</choise>
+					<choise>
+						<value>1</value>
+						<description>MDIS controlled current buffer</description>
+					</choise>
+					<choise>
+						<value>2</value>
+						<description>MDIS controlled ring buffer</description>
+					</choise>
+					<choise>
+						<value>3</value>
+						<description>MDIS controlled ring buffer overwrite</description>
+					</choise>
+				</choises>
+			</setting>
+			<setting>
+				<name>SIZE</name>
+				<description>read buffer size in bytes</description>
+				<type>U_INT32</type>
+				<defaultvalue>512</defaultvalue>
+			</setting>
+			<setting>
+				<name>TIMEOUT</name>
+				<description>read buffer timeout in ms</description>
+				<type>U_INT32</type>
+				<defaultvalue>1000</defaultvalue>
+			</setting>
+			<setting>
+				<name>HIGHWATER</name>
+				<description>read buffer high water mark</description>
+				<type>U_INT32</type>
+				<defaultvalue>512</defaultvalue>
+			</setting>
+		</settingsubdir>
+		<settingsubdir rangestart="0" rangeend="31">
+			<name>CHANNEL_</name>
+			<setting>
+				<name>IRQ_ENABLE</name>
+				<description>channel interrupt mode</description>
+				<type>U_INT32</type>
+				<defaultvalue>0</defaultvalue>
+				<choises>
+					<choise>
+						<value>0</value>
+						<description>none</description>
+					</choise>
+					<choise>
+						<value>1</value>
+						<description>rising edge</description>
+					</choise>
+					<choise>
+						<value>2</value>
+						<description>falling edge</description>
+					</choise>
+					<choise>
+						<value>3</value>
+						<description>any edge</description>
+					</choise>
+				</choises>
+			</setting>
+		</settingsubdir>
+		<debugsetting mbuf="true"/>
+	</settinglist>
+	<swmodulelist>
+		<swmodule>
+			<name>m66</name>
+			<description>Driver for M66</description>
+			<type>Low Level Driver</type>
+			<makefilepath>M066/DRIVER/COM/driver.mak</makefilepath>
+		</swmodule>
+		<swmodule>
+			<name>m66_simp</name>
+			<description>Simple test of the m66 mdis driver</description>
+			<type>Driver Specific Tool</type>
+			<makefilepath>M066/EXAMPLE/M66_SIMP/COM/program.mak</makefilepath>
+		</swmodule>
+		<swmodule>
+			<name>m66_demo</name>
+			<description>Demonstration program for M66 with demo adapter</description>
+			<type>Driver Specific Tool</type>
+			<makefilepath>M066/EXAMPLE/M66_DEMO/COM/program.mak</makefilepath>
+		</swmodule>
+		<swmodule internal="true">
+			<name>m66_endless</name>
+			<description>Endless test of the m66 mdis driver</description>
+			<type>Driver Specific Tool</type>
+			<makefilepath>M066/TEST/M66_ENDLESS/COM/program.mak</makefilepath>
+		</swmodule>
+		<swmodule internal="true">
+			<name>m66_main</name>
+			<description>Test of the m66_drv.c m66_drv.h</description>
+			<type>Driver Specific Tool</type>
+			<makefilepath>M066/TEST/M66_MAIN/COM/program.mak</makefilepath>
+		</swmodule>
+		<swmodule>
+			<name>m66_perf</name>
+			<description>Performance test for m66 mdis driver</description>
+			<type>Driver Specific Tool</type>
+			<makefilepath>M066/TEST/M66_PERF/COM/program.mak</makefilepath>
+		</swmodule>
+		<swmodule internal="true">
+			<name>m66_irq</name>
+			<description>Interrupt handling test for m66 mdis driver</description>
+			<type>Driver Specific Tool</type>
+			<makefilepath>M066/TEST/M66_IRQ/COM/program.mak</makefilepath>
+		</swmodule>
+	</swmodulelist>
 </package>
