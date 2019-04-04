@@ -1243,6 +1243,18 @@ static int32 M66_HwBlockRead
 			if( (rdVal1 & D_EDMSK) != D_EDMSK ){
 
 				/* 
+				 * Consideration for the case that a second edge occures
+				 * during one loop iteration:
+				 *
+				 * Only if the input signal is stable for a period of 40us
+				 * the I/O controller will update the IN bit in the
+				 * Data Input/Output Register.
+				 * It is possible that the IN bit change and therefore
+				 * an additional edge occures during one loop iteration
+				 * (between the read and subsequent write to the IOREG).
+				 * But a third edge shouldn't never happen during one loop
+				 * iteration.
+				 *
 				 * If a new edge occures between read (1) and write (2)
 				 * then write (2) will reset the new edge-occured-flag
 				 * on error. The new occured edge would be lost.
@@ -1251,29 +1263,35 @@ static int32 M66_HwBlockRead
 				 * - (3) read again from data i/o register
 				 * - Determine if a new edge has been occured between
 				 *   read (1) and read (3): IN at read (1) != IN at read (3)
-				 * - If any edge-occured-flag is set at read (3), then the
-				 *   new edge has been occured after write (2): no error!
-				 * - If no edge-occured-flag is set at read (3), then the
-				 *   new edge has been occured between read (1) and write (2):
-				 *   In this case, we assume that the new occured edge is of
+				 *   a) If any edge-occured-flag is set at read (3), then the
+				 *      new edge has been occured after write (2) and we have to
+				        reset the second edge-accured-flag as well (4).
+				 *   b) If no edge-occured-flag is set at read (3), then the
+				 *      new edge has been occured between read (1) and write (2).
+				 *   In both cases, we assume that the new occured edge is of
 				 *   the other edge type as detected at read (1). Therefore we
-				 *   notify that a rising and a falling edge was occured and
-				 *   return the last read value from read (2).
+				 *   notify that a rising and a falling edge occured and
+				 *   return the last read value from read (3).
 				 */
 
 				/* (3) read from data i/o register */
-				rdVal2   = (u_int8) MREAD_D16( m66Hdl->maPld, IOREG(ch) );
+				rdVal2 = (u_int8) MREAD_D16( m66Hdl->maPld, IOREG(ch) );
 
-				/* new edge occured? AND .. */
-				if( ((rdVal1 & D_INVAL) != (rdVal2 & D_INVAL)) &&
-					/* .. no edge-occured-flag set? */
-					( rdVal2 & D_EDMSK ) ){
-					
-						DBGWRT_ERR((DBH, "%s: one edge-occured-flag lost but considered\n",
-							functionName));
+				/* new edge occured? */
+				if( ((rdVal1 & D_INVAL) != (rdVal2 & D_INVAL)) ){
 
-						/* using read (2) state and notify both edges */ 
-						rdVal1 = rdVal2 | D_EDMSK;
+					/* edge-occured-flag set? */
+					if(	rdVal2 & D_EDMSK ){
+						DBGWRT_2((DBH, " second edge - occured after write (2)\n"));
+						/* (4) reset second edge-occured-flag */
+						MWRITE_D16(m66Hdl->maPld, IOREG(ch), rdVal2 &~ (rdVal2 & D_EDMSK));
+					}
+					else {
+						DBGWRT_2((DBH, " second edge - occured between read (1) and write (2)\n"));
+					}
+
+					/* using read (2) state and notify both edges */
+					rdVal1 = rdVal2 | D_EDMSK;
 				}
 			}/* only one edge-occured-flag set? */
 		}/* any edge-occured-flag set? */
