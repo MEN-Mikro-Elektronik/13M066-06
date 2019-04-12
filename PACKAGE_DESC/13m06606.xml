@@ -5,7 +5,7 @@
 	<description>MDIS5 driver package for MEN M66 M-Module</description>
 	<date>2013-11-08</date>
 	<revision>2.22</revision>
-	<docroot>DRIVERS/MDIS_LL/M066/DOC/main.html</docroot>
+    <docroot>DRIVERS/MDIS_LL/M066/DOC/html/index.html</docroot>
 	<modellist>
 		<model>
 			<hwname>M66</hwname>
