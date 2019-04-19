@@ -26,56 +26,24 @@
 <span class="comment"> ************                       m66_demo.c                   ************</span>
 <span class="comment"> ************                                                    ************</span>
 <span class="comment"> ***************************************************************************/</span>
-<span class="comment">/*-------------------------------[ History ]---------------------------------</span>
-<span class="comment"> *</span>
-<span class="comment"> * $Log: m66_demo.c,v $</span>
-<span class="comment"> * Revision 1.11  2009/07/06 13:31:23  CRuff</span>
-<span class="comment"> * R: defines U_INT32_OR_64, INT32_OR_64 and MDIS_PATH not available in older</span>
-<span class="comment"> *    mdis versions</span>
-<span class="comment"> * M: add defines if not already done</span>
-<span class="comment"> *</span>
-<span class="comment"> * Revision 1.10  2009/06/24 11:06:56  CRuff</span>
-<span class="comment"> * R: new MDIS path type MDIS_PATH</span>
-<span class="comment"> * M: changed type of filedescriptor for M_open to MDIS_PATH</span>
-<span class="comment"> *</span>
-<span class="comment"> * Revision 1.9  2009/03/30 14:31:04  ufranke</span>
-<span class="comment"> * cosmetics</span>
-<span class="comment"> *</span>
-<span class="comment"> * Revision 1.8  2008/09/17 17:59:22  CKauntz</span>
-<span class="comment"> * R1: No doxygen documentation</span>
-<span class="comment"> * R2: No 64 bit support</span>
-<span class="comment"> * M1: Changed comments to doxygen documentations</span>
-<span class="comment"> * M2: Changed devHdl to INT32_OR_64 to support 64 bit OS</span>
-<span class="comment"> *</span>
-<span class="comment"> * Revision 1.7  2008/09/15 15:05:08  ufranke</span>
-<span class="comment"> * R: diab compiler warnings</span>
-<span class="comment"> * M: cosmetics</span>
-<span class="comment"> *</span>
-<span class="comment"> * Revision 1.6  2008/01/18 14:27:19  ufranke</span>
-<span class="comment"> * cosmetics</span>
-<span class="comment"> *</span>
-<span class="comment"> * Revision 1.5  2003/07/25 15:09:54  UFranke</span>
-<span class="comment"> * cosmetics</span>
-<span class="comment"> *</span>
-<span class="comment"> * Revision 1.4  1998/07/29 15:13:14  see</span>
-<span class="comment"> * data[] type changed from int8 to u_int8</span>
-<span class="comment"> * loop count reduced from 100 to 10</span>
-<span class="comment"> * "PRESS ^C" message remove</span>
-<span class="comment"> * M_close return value check was wrong</span>
-<span class="comment"> *</span>
-<span class="comment"> * Revision 1.3  1998/07/20 10:37:38  Schmidt</span>
-<span class="comment"> * VXWORKS define removed, NO_MAIN_FUNC define for main() added,</span>
-<span class="comment"> * cosmetics</span>
-<span class="comment"> *</span>
-<span class="comment"> * Revision 1.2  1998/03/04 11:05:27  Schmidt</span>
-<span class="comment"> * change run = 50 --&gt; run = 100</span>
-<span class="comment"> *</span>
-<span class="comment"> * Revision 1.1  1998/02/20 15:07:30  Schmidt</span>
-<span class="comment"> * Added by mcvs</span>
-<span class="comment"> * </span>
+<span class="comment">/*</span>
 <span class="comment"> *---------------------------------------------------------------------------</span>
-<span class="comment"> * (c) Copyright 1998..2009 by MEN mikro elektronik GmbH, Nuremberg, Germany</span>
+<span class="comment"> * Copyright (c) 1998-2019, MEN Mikro Elektronik GmbH</span>
 <span class="comment"> ****************************************************************************/</span>
+<span class="comment">/*</span>
+<span class="comment">* This program is free software: you can redistribute it and/or modify</span>
+<span class="comment">* it under the terms of the GNU General Public License as published by</span>
+<span class="comment">* the Free Software Foundation, either version 2 of the License, or</span>
+<span class="comment">* (at your option) any later version.</span>
+<span class="comment">*</span>
+<span class="comment">* This program is distributed in the hope that it will be useful,</span>
+<span class="comment">* but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+<span class="comment">* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span>
+<span class="comment">* GNU General Public License for more details.</span>
+<span class="comment">*</span>
+<span class="comment">* You should have received a copy of the GNU General Public License</span>
+<span class="comment">* along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span>
+<span class="comment">*/</span>
 
 <span class="keyword">static</span> <span class="keywordtype">char</span> *RCSid=<span class="stringliteral">"$Id: m66_demo.c,v 1.11 2009/07/06 13:31:23 CRuff Exp $"</span>;
 
@@ -107,7 +75,7 @@
 
 
 <span class="comment">/******************************** main *************************************/</span>
-<span class="keywordtype">int</span> <a name="a2"></a><a class="code" href="m66__ll_8c.html#a11">main</a>( <span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[ ] )
+<span class="keywordtype">int</span> <a name="a2"></a><a class="code" href="m66__simp_8c.html#a3">main</a>( <span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[ ] )
 {
     <span class="keywordflow">if</span>( argc &lt; 2){
         printf(<span class="stringliteral">"usage: m66_demo &lt;device name&gt;\n"</span>);
@@ -270,7 +238,7 @@ CLEANUP:
 <!-- Footer -->
 	<p class="footer">
 	Generated for M66 MDIS Driver using <a href="http://www.doxygen.org">doxygen</a>.<br>
-	Copyright &copy; 2012 <a href="http://www.men.de">MEN Mikro Elektronik GmbH</a>. All Rights Reserved.
+	Copyright &copy; 2019 <a href="http://www.men.de">MEN Mikro Elektronik GmbH</a>. All Rights Reserved.
 	</p>
 </div>
 

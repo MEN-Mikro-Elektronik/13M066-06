@@ -9,10 +9,6 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="m66__drv_8c.html#a47"><param name="Name" value="m66_drv.c"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="m66__drv_8h.html#a3"><param name="Name" value="m66_drv.h"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="See Also" value="_LL_DRV_"><param name="Name" value="_LL_DRV_"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="m66__ll_8c.html#a0"><param name="Name" value="m66_ll.c"></OBJECT>
-  </UL>
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="_M66_GLOBNAME"><param name="Name" value="_M66_GLOBNAME"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="m66__drv_8h.html#a1"><param name="Name" value="m66_drv.h"></OBJECT>
@@ -28,18 +24,6 @@
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="bitset"><param name="Name" value="bitset"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="m66__drv_8c.html#a27"><param name="Name" value="m66_drv.c"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="See Also" value="CH_0"><param name="Name" value="CH_0"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="m66__ll_8c.html#a8"><param name="Name" value="m66_ll.c"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="See Also" value="CH_31"><param name="Name" value="CH_31"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="m66__ll_8c.html#a9"><param name="Name" value="m66_ll.c"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="See Also" value="CH_DUMMY"><param name="Name" value="CH_DUMMY"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="m66__ll_8c.html#a7"><param name="Name" value="m66_ll.c"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="D302_MAGICWORD_REG"><param name="Name" value="D302_MAGICWORD_REG"></OBJECT>
   <UL>
@@ -96,10 +80,6 @@
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="DBH"><param name="Name" value="DBH"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="m66__drv_8c.html#a2"><param name="Name" value="m66_drv.c"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="See Also" value="delay"><param name="Name" value="delay"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="m66__ll_8c.html#a12"><param name="Name" value="m66_ll.c"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="edgemask"><param name="Name" value="edgemask"></OBJECT>
   <UL>
@@ -371,26 +351,6 @@
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="m66__drv_8h.html#a5"><param name="Name" value="m66_drv.h"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="m66__ll_8c.html"><param name="Name" value="m66_ll.c"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="m66__ll_8c.html#a0"><param name="Name" value="_LL_DRV_"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="m66__ll_8c.html#a8"><param name="Name" value="CH_0"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="m66__ll_8c.html#a9"><param name="Name" value="CH_31"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="m66__ll_8c.html#a7"><param name="Name" value="CH_DUMMY"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="m66__ll_8c.html#a12"><param name="Name" value="delay"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="m66__ll_8c.html#a10"><param name="Name" value="m66_ll"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="m66__ll_8c.html#a1"><param name="Name" value="M_ERRSTRING"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="m66__ll_8c.html#a11"><param name="Name" value="main"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="m66__ll_8c.html#a3"><param name="Name" value="OFF"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="m66__ll_8c.html#a4"><param name="Name" value="ON"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="m66__ll_8c.html#a2"><param name="Name" value="RCSid"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="m66__ll_8c.html#a6"><param name="Name" value="T_ERROR"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="m66__ll_8c.html#a5"><param name="Name" value="T_OK"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="See Also" value="m66_ll"><param name="Name" value="m66_ll"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="m66__ll_8c.html#a10"><param name="Name" value="m66_ll.c"></OBJECT>
-  </UL>
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="M66_MAX_CH"><param name="Name" value="M66_MAX_CH"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="m66__drv_8h.html#a4"><param name="Name" value="m66_drv.h"></OBJECT>
@@ -450,14 +410,9 @@
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="m66__drv_8c.html#a39"><param name="Name" value="m66_drv.c"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="See Also" value="M_ERRSTRING"><param name="Name" value="M_ERRSTRING"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="m66__ll_8c.html#a1"><param name="Name" value="m66_ll.c"></OBJECT>
-  </UL>
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="main"><param name="Name" value="main"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="m66__demo_8c.html#a6"><param name="Name" value="m66_demo.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="m66__ll_8c.html#a11"><param name="Name" value="m66_ll.c"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="m66__simp_8c.html#a3"><param name="Name" value="m66_simp.c"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="maPld"><param name="Name" value="maPld"></OBJECT>
@@ -481,14 +436,6 @@
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="m66__drv_8c.html#a5"><param name="Name" value="m66_drv.c"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="See Also" value="OFF"><param name="Name" value="OFF"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="m66__ll_8c.html#a3"><param name="Name" value="m66_ll.c"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="See Also" value="ON"><param name="Name" value="ON"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="m66__ll_8c.html#a4"><param name="Name" value="m66_ll.c"></OBJECT>
-  </UL>
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="osHdl"><param name="Name" value="osHdl"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structM66__HANDLE.html#o3"><param name="Name" value="M66_HANDLE"></OBJECT>
@@ -500,7 +447,6 @@
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="RCSid"><param name="Name" value="RCSid"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="m66__demo_8c.html#a2"><param name="Name" value="m66_demo.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="m66__ll_8c.html#a2"><param name="Name" value="m66_ll.c"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="m66__simp_8c.html#a0"><param name="Name" value="m66_simp.c"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="ShowError"><param name="Name" value="ShowError"></OBJECT>
@@ -510,14 +456,6 @@
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="sigHdl"><param name="Name" value="sigHdl"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structM66__HANDLE.html#o7"><param name="Name" value="M66_HANDLE"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="See Also" value="T_ERROR"><param name="Name" value="T_ERROR"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="m66__ll_8c.html#a6"><param name="Name" value="m66_ll.c"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="See Also" value="T_OK"><param name="Name" value="T_OK"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="m66__ll_8c.html#a5"><param name="Name" value="m66_ll.c"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="U_INT32_OR_64"><param name="Name" value="U_INT32_OR_64"></OBJECT>
   <UL>

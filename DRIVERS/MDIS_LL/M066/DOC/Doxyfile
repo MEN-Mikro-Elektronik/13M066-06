@@ -1,0 +1,23 @@
+@INCLUDE_PATH = $(MEN_DOXYGENTMPL)
+@INCLUDE = DoxyfileCommon
+
+PROJECT_NAME           = "M66 MDIS Driver"
+INPUT                  = \
+                        ../DRIVER/COM                      \
+                        $(MEN_COM_INC)/MEN/m66_drv.h       \
+                        ../EXAMPLE/M66_SIMP/COM/m66_simp.c \
+                        ../EXAMPLE/M66_DEMO/COM/m66_demo.c
+
+EXAMPLE_RECURSIVE      = YES
+EXAMPLE_PATH           = ../EXAMPLE \
+                         ../DRIVER/COM
+OUTPUT_DIRECTORY       = .
+EXTRACT_ALL            = YES
+EXTRACT_STATIC         = YES
+GENERATE_HTMLHELP      = YES
+WARNINGS               = YES
+WARN_IF_DOC_ERROR      = YES
+WARN_IF_UNDOCUMENTED   = YES
+GENERATE_HTMLHELP      = YES
+TAGFILES               = 
+GENERATE_TAGFILE       = 
