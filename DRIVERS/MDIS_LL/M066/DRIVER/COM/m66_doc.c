@@ -211,7 +211,7 @@
 /** \example m66_sw_min.dsc */
 /** \example m66_sw_max.dsc */
 
-/*! \page dummy
+/*! \page m66dummy MEN logo
   \menimages
 */
 
