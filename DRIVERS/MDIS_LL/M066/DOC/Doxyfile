@@ -2,14 +2,16 @@
 @INCLUDE = DoxyfileCommon
 
 PROJECT_NAME           = "M66 MDIS Driver"
-INPUT                  = \
-                        ../DRIVER/COM                      \
-                        $(MEN_COM_INC)/MEN/m66_drv.h       \
-                        ../EXAMPLE/M66_SIMP/COM/m66_simp.c \
-                        ../EXAMPLE/M66_DEMO/COM/m66_demo.c
+INPUT                  = ../DRIVER/COM \
+                         $(MEN_COM_INC)/MEN/m66_drv.h \
+                         ../EXAMPLE/M66_SIMP/COM/m66_simp.c \
+                         ../EXAMPLE/M66_LL/COM/m66_ll.c \
+                         ../EXAMPLE/M66_DEMO/COM/m66_demo.c \
 
 EXAMPLE_RECURSIVE      = YES
-EXAMPLE_PATH           = ../EXAMPLE \
+EXAMPLE_PATH           = ../EXAMPLE/M66_SIMP/COM \
+                         ../EXAMPLE/M66_DEMO/COM/m66_demo.c \
+                         ../EXAMPLE/M66_LL/COM/m66_ll.c \
                          ../DRIVER/COM
 OUTPUT_DIRECTORY       = .
 EXTRACT_ALL            = YES
@@ -19,5 +21,5 @@ WARNINGS               = YES
 WARN_IF_DOC_ERROR      = YES
 WARN_IF_UNDOCUMENTED   = YES
 GENERATE_HTMLHELP      = YES
-TAGFILES               = 
-GENERATE_TAGFILE       = 
+TAGFILES               = ../../../../LIBSRC/MDIS_API/DOC/mdis_api.tag=../../../../../LIBSRC/MDIS_API/DOC/html
+GENERATE_TAGFILE       = m66_driver.tag
