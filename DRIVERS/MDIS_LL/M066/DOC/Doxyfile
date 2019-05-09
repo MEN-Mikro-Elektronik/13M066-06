@@ -5,13 +5,15 @@ PROJECT_NAME           = "M66 MDIS Driver"
 INPUT                  = ../DRIVER/COM \
                          $(MEN_COM_INC)/MEN/m66_drv.h \
                          ../EXAMPLE/M66_SIMP/COM/m66_simp.c \
-                         ../EXAMPLE/M66_LL/COM/m66_ll.c \
                          ../EXAMPLE/M66_DEMO/COM/m66_demo.c \
+                         ../TEST/M66_ENDLESS/COM/m66_endless.c \
+                         ../TEST/M66_IRQ/COM/m66_irq.c \
+                         ../TEST/M66_MAIN/COM/m66_main.c \
+                         ../TEST/M66_PERF/COM/m66_perf.c
 
 EXAMPLE_RECURSIVE      = YES
 EXAMPLE_PATH           = ../EXAMPLE/M66_SIMP/COM \
                          ../EXAMPLE/M66_DEMO/COM/m66_demo.c \
-                         ../EXAMPLE/M66_LL/COM/m66_ll.c \
                          ../DRIVER/COM
 OUTPUT_DIRECTORY       = .
 EXTRACT_ALL            = YES
