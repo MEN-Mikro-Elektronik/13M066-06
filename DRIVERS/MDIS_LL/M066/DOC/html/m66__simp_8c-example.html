@@ -11,7 +11,7 @@
 
 <div class="left_to_right" style="padding-top: 6px; background-color: #F0F0F0; height: 110px; border-bottom: 2px solid #D1D1D2;">
 	<!-- Titel -->
-	<img src="menlogo.gif" alt="MEN" style="float: left; height: 103px; width: 155px; margin: 0px;"></a>
+	<img src="menlogo.gif" alt="MEN" style="float: left; height: 103px; width: 155px; margin: 0px;">
 	<h1 style="margin: 0px; padding-top: 35px; padding-bottom: 0px;">M66 MDIS Driver &nbsp; </h1>
 	<h3>Example Documentation</h3>
 </div>
@@ -86,7 +86,7 @@
 <span class="comment">/*-----------------------------------------+</span>
 <span class="comment">|  PROTOTYPES                              |</span>
 <span class="comment">+------------------------------------------*/</span>
-<span class="keyword">static</span> <span class="keywordtype">int</span> <a name="a3"></a><a class="code" href="m66__simp_8c.html#a1">M66_Simple</a>( <span class="keywordtype">char</span> *DevName );
+<span class="keyword">static</span> <span class="keywordtype">int</span> <a name="a10"></a><a class="code" href="m66__simp_8c.html#a1">M66_Simple</a>( <span class="keywordtype">char</span> *DevName );
 
 <span class="comment">/******************************* errShow ************************************</span>
 <span class="comment"> *</span>
@@ -101,13 +101,13 @@
 <span class="comment"> *  Globals....:  errno</span>
 <span class="comment"> *</span>
 <span class="comment"> ****************************************************************************/</span>
-<span class="keyword">static</span> <span class="keywordtype">void</span> <a name="a4"></a><a class="code" href="m66__simp_8c.html#a2">errShow</a>( <span class="keywordtype">void</span> )
+<span class="keyword">static</span> <span class="keywordtype">void</span> <a name="a11"></a><a class="code" href="m66__simp_8c.html#a2">errShow</a>( <span class="keywordtype">void</span> )
 {
    u_int32 error;
 
    error = UOS_ErrnoGet();
 
-   printf(<span class="stringliteral">"*** %s ***\n"</span>,M_errstring( error ) );
+   printf(<span class="stringliteral">"*** %s ***\n"</span>,<a name="a12"></a><a class="codeRef" doxygen="mdis_api.tag:../../../../../LIBSRC/MDIS_API/DOC/html/" href="../../../../../LIBSRC/MDIS_API/DOC/html/m__errstr_8c.html#a0">M_errstring</a>( error ) );
 }
 
 
@@ -125,7 +125,7 @@
 <span class="comment"> *</span>
 <span class="comment"> *  Globals....:  -</span>
 <span class="comment"> ****************************************************************************/</span>
- <span class="keywordtype">int</span> <a name="a5"></a><a class="code" href="m66__simp_8c.html#a3">main</a>( <span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[ ] )
+ <span class="keywordtype">int</span> <a name="a13"></a><a class="code" href="m66__simp_8c.html#a3">main</a>( <span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[ ] )
  {
     <span class="keywordflow">if</span>( argc &lt; 2){
         printf(<span class="stringliteral">"usage: m66_simp &lt;device name&gt;\n"</span>);
@@ -160,28 +160,28 @@
     printf(<span class="stringliteral">"=========================\n"</span>);
     printf(<span class="stringliteral">"%s"</span>, RCSid );
     printf(<span class="stringliteral">"M_open\n"</span>);
-    <span class="keywordflow">if</span>( (path = M_open(devName)) &lt; 0 ) <span class="keywordflow">goto</span> M66_TESTERR;
+    <span class="keywordflow">if</span>( (path = <a name="a14"></a><a class="codeRef" doxygen="mdis_api.tag:../../../../../LIBSRC/MDIS_API/DOC/html/" href="../../../../../LIBSRC/MDIS_API/DOC/html/mdis__api_8c.html#a4">M_open</a>(devName)) &lt; 0 ) <span class="keywordflow">goto</span> M66_TESTERR;
 
     <span class="comment">/*------------------------------------+</span>
 <span class="comment">    |  configuration                      |</span>
 <span class="comment">    +-------------------------------------*/</span>
     printf(<span class="stringliteral">"configuration - M_setstat current channel 0\n"</span>);
-    <span class="keywordflow">if</span>( M_setstat( path, M_MK_IO_MODE, M_IO_EXEC ) ) <span class="keywordflow">goto</span> M66_TESTERR;
+    <span class="keywordflow">if</span>( <a name="a15"></a><a class="codeRef" doxygen="mdis_api.tag:../../../../../LIBSRC/MDIS_API/DOC/html/" href="../../../../../LIBSRC/MDIS_API/DOC/html/mdis__api_8c.html#a13">M_setstat</a>( path, M_MK_IO_MODE, M_IO_EXEC ) ) <span class="keywordflow">goto</span> M66_TESTERR;
 
     ch = 0; <span class="comment">/* select the first channel */</span>
 
     <span class="keywordflow">for</span>( i=0; i&lt;64; i++ )
     {
         ch = i/2;
-        M_setstat(path, M_MK_CH_CURRENT, ch);    <span class="comment">/* set current channel */</span>
+        <a class="codeRef" doxygen="mdis_api.tag:../../../../../LIBSRC/MDIS_API/DOC/html/" href="../../../../../LIBSRC/MDIS_API/DOC/html/mdis__api_8c.html#a13">M_setstat</a>(path, M_MK_CH_CURRENT, ch);    <span class="comment">/* set current channel */</span>
         valL = ((i+1)%2);
         printf(<span class="stringliteral">"M_write ch %d %d  || "</span>, (<span class="keywordtype">int</span>)ch, (<span class="keywordtype">int</span>) valL );
-        <span class="keywordflow">if</span>( M_write(path, valL ) ) <span class="keywordflow">goto</span> M66_TESTERR;  <span class="comment">/* write value to curr ch */</span>
+        <span class="keywordflow">if</span>( <a name="a16"></a><a class="codeRef" doxygen="mdis_api.tag:../../../../../LIBSRC/MDIS_API/DOC/html/" href="../../../../../LIBSRC/MDIS_API/DOC/html/mdis__api_8c.html#a11">M_write</a>(path, valL ) ) <span class="keywordflow">goto</span> M66_TESTERR;  <span class="comment">/* write value to curr ch */</span>
 
         UOS_Delay( 300 );
 
         printf(<span class="stringliteral">"M_read ch %d"</span>, (<span class="keywordtype">int</span>)ch );
-        <span class="keywordflow">if</span>( M_read(path, &amp;valL ) ) <span class="keywordflow">goto</span> M66_TESTERR;  <span class="comment">/* read value back */</span>
+        <span class="keywordflow">if</span>( <a name="a17"></a><a class="codeRef" doxygen="mdis_api.tag:../../../../../LIBSRC/MDIS_API/DOC/html/" href="../../../../../LIBSRC/MDIS_API/DOC/html/mdis__api_8c.html#a10">M_read</a>(path, &amp;valL ) ) <span class="keywordflow">goto</span> M66_TESTERR;  <span class="comment">/* read value back */</span>
         printf(<span class="stringliteral">" %d\n"</span>, (<span class="keywordtype">int</span>) valL);
 
         UOS_Delay( 300 );
@@ -189,7 +189,7 @@
 
 
     printf(<span class="stringliteral">"M_close\n"</span>);
-    <span class="keywordflow">if</span>( M_close( path ) &lt; 0) <span class="keywordflow">goto</span> M66_TESTERR;
+    <span class="keywordflow">if</span>( <a name="a18"></a><a class="codeRef" doxygen="mdis_api.tag:../../../../../LIBSRC/MDIS_API/DOC/html/" href="../../../../../LIBSRC/MDIS_API/DOC/html/mdis__api_8c.html#a9">M_close</a>( path ) &lt; 0) <span class="keywordflow">goto</span> M66_TESTERR;
 
     printf(<span class="stringliteral">"    =&gt; OK\n"</span>);
     <span class="keywordflow">return</span>( 0 );
@@ -198,7 +198,7 @@
 M66_TESTERR:
     <a class="code" href="m66__simp_8c.html#a2">errShow</a>();
     printf(<span class="stringliteral">"    =&gt; Error\n"</span>);
-    M_close( path );
+    <a class="codeRef" doxygen="mdis_api.tag:../../../../../LIBSRC/MDIS_API/DOC/html/" href="../../../../../LIBSRC/MDIS_API/DOC/html/mdis__api_8c.html#a9">M_close</a>( path );
     <span class="keywordflow">return</span>( 1 );
 }<span class="comment">/*M66_Simple*/</span>
 

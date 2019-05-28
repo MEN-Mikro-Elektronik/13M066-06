@@ -1,7 +1,7 @@
 @INCLUDE_PATH = $(MEN_DOXYGENTMPL)
 @INCLUDE = DoxyfileCommon
 
-#MDIS_COMMIT=
+#MDIS_COMMIT=88860970bd72bf1268c31f2d34efaa5f6f1d9c03
 
 PROJECT_NAME           = "M66 MDIS Driver"
 INPUT                  = ../DRIVER/COM \

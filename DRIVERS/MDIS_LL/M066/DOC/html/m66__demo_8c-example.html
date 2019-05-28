@@ -11,7 +11,7 @@
 
 <div class="left_to_right" style="padding-top: 6px; background-color: #F0F0F0; height: 110px; border-bottom: 2px solid #D1D1D2;">
 	<!-- Titel -->
-	<img src="menlogo.gif" alt="MEN" style="float: left; height: 103px; width: 155px; margin: 0px;"></a>
+	<img src="menlogo.gif" alt="MEN" style="float: left; height: 103px; width: 155px; margin: 0px;">
 	<h1 style="margin: 0px; padding-top: 35px; padding-bottom: 0px;">M66 MDIS Driver &nbsp; </h1>
 	<h3>Example Documentation</h3>
 </div>
@@ -117,7 +117,7 @@
     <span class="comment">/*---------------------------+  </span>
 <span class="comment">    | open the device            |</span>
 <span class="comment">    +---------------------------*/</span>
-    <span class="keywordflow">if</span>( (path = M_open(devName)) &lt; 0 ) <span class="keywordflow">goto</span> CLEANUP;
+    <span class="keywordflow">if</span>( (path = <a name="a3"></a><a class="codeRef" doxygen="mdis_api.tag:../../../../../LIBSRC/MDIS_API/DOC/html/" href="../../../../../LIBSRC/MDIS_API/DOC/html/mdis__api_8c.html#a4">M_open</a>(devName)) &lt; 0 ) <span class="keywordflow">goto</span> CLEANUP;
     printf(<span class="stringliteral">"Device %s opened\n\n"</span>, devName);
 
     <span class="comment">/*---------------------------+  </span>
@@ -125,7 +125,7 @@
 <span class="comment">    +---------------------------*/</span>
     <span class="comment">/* set non auto-increment mode */</span>
     printf(<span class="stringliteral">"M_setstat() - set non auto-increment mode\n\n"</span>);
-    <span class="keywordflow">if</span>( M_setstat( path, M_MK_IO_MODE, M_IO_EXEC ) &lt; 0 ) <span class="keywordflow">goto</span> CLEANUP;
+    <span class="keywordflow">if</span>( <a name="a4"></a><a class="codeRef" doxygen="mdis_api.tag:../../../../../LIBSRC/MDIS_API/DOC/html/" href="../../../../../LIBSRC/MDIS_API/DOC/html/mdis__api_8c.html#a13">M_setstat</a>( path, M_MK_IO_MODE, M_IO_EXEC ) &lt; 0 ) <span class="keywordflow">goto</span> CLEANUP;
 
     <span class="comment">/*---------------------------+  </span>
 <span class="comment">    | write number, toggle, read |</span>
@@ -136,14 +136,14 @@
         <span class="keywordflow">for</span>( i=0; i&lt;11; i++ )
         {
             <span class="keywordflow">if</span>(i&lt;10) printf(<span class="stringliteral">"M_setblock() - output number %d on channel 0..6\n"</span>,(<span class="keywordtype">int</span>)i);
-            <span class="keywordflow">if</span>( M_setblock( path, data[i], 7 ) &lt; 0) <span class="keywordflow">goto</span> CLEANUP;
+            <span class="keywordflow">if</span>( <a name="a5"></a><a class="codeRef" doxygen="mdis_api.tag:../../../../../LIBSRC/MDIS_API/DOC/html/" href="../../../../../LIBSRC/MDIS_API/DOC/html/mdis__api_8c.html#a15">M_setblock</a>( path, data[i], 7 ) &lt; 0) <span class="keywordflow">goto</span> CLEANUP;
 
             <span class="comment">/* toggle point segment */</span>
             printf(<span class="stringliteral">"toggle point segment (channel 7)\n"</span>);
-            <span class="keywordflow">if</span>( M_setstat(path, M_MK_CH_CURRENT, 7) &lt; 0 ) <span class="keywordflow">goto</span> CLEANUP;
+            <span class="keywordflow">if</span>( <a class="codeRef" doxygen="mdis_api.tag:../../../../../LIBSRC/MDIS_API/DOC/html/" href="../../../../../LIBSRC/MDIS_API/DOC/html/mdis__api_8c.html#a13">M_setstat</a>(path, M_MK_CH_CURRENT, 7) &lt; 0 ) <span class="keywordflow">goto</span> CLEANUP;
             <span class="keywordflow">for</span>( j=0; j&lt;11; j++)
             {
-                <span class="keywordflow">if</span>( M_write(path, j%2) &lt; 0 ) <span class="keywordflow">goto</span> CLEANUP;
+                <span class="keywordflow">if</span>( <a name="a6"></a><a class="codeRef" doxygen="mdis_api.tag:../../../../../LIBSRC/MDIS_API/DOC/html/" href="../../../../../LIBSRC/MDIS_API/DOC/html/mdis__api_8c.html#a11">M_write</a>(path, j%2) &lt; 0 ) <span class="keywordflow">goto</span> CLEANUP;
                 UOS_Delay( 100 );
             }
 
@@ -151,8 +151,8 @@
             printf(<span class="stringliteral">"read values back (channel 0..6)  : "</span>);
             <span class="keywordflow">for</span>( ch=0; ch&lt;7; ch++)
             {
-                <span class="keywordflow">if</span>( M_setstat(path, M_MK_CH_CURRENT, ch) &lt; 0 ) <span class="keywordflow">goto</span> CLEANUP;
-                <span class="keywordflow">if</span>( M_read(path, &amp;value ) &lt; 0 ) <span class="keywordflow">goto</span> CLEANUP;
+                <span class="keywordflow">if</span>( <a class="codeRef" doxygen="mdis_api.tag:../../../../../LIBSRC/MDIS_API/DOC/html/" href="../../../../../LIBSRC/MDIS_API/DOC/html/mdis__api_8c.html#a13">M_setstat</a>(path, M_MK_CH_CURRENT, ch) &lt; 0 ) <span class="keywordflow">goto</span> CLEANUP;
+                <span class="keywordflow">if</span>( <a name="a7"></a><a class="codeRef" doxygen="mdis_api.tag:../../../../../LIBSRC/MDIS_API/DOC/html/" href="../../../../../LIBSRC/MDIS_API/DOC/html/mdis__api_8c.html#a10">M_read</a>(path, &amp;value ) &lt; 0 ) <span class="keywordflow">goto</span> CLEANUP;
                 printf(<span class="stringliteral">" %d"</span>, (<span class="keywordtype">int</span>)value);
             }
             printf(<span class="stringliteral">"\n\n"</span>);
@@ -163,25 +163,25 @@
 <span class="comment">        +---------------------------*/</span>
         printf(<span class="stringliteral">"rotate segments (I)\n"</span>);
         <span class="comment">/* configuration - set auto-increment mode */</span>
-        <span class="keywordflow">if</span>( M_setstat( path, M_MK_IO_MODE, M_IO_EXEC_INC ) &lt; 0 ) <span class="keywordflow">goto</span> CLEANUP;
+        <span class="keywordflow">if</span>( <a class="codeRef" doxygen="mdis_api.tag:../../../../../LIBSRC/MDIS_API/DOC/html/" href="../../../../../LIBSRC/MDIS_API/DOC/html/mdis__api_8c.html#a13">M_setstat</a>( path, M_MK_IO_MODE, M_IO_EXEC_INC ) &lt; 0 ) <span class="keywordflow">goto</span> CLEANUP;
 
         <span class="comment">/* set segments */</span>
-        <span class="keywordflow">if</span>( M_setstat(path, M_MK_CH_CURRENT, 0) &lt; 0 ) <span class="keywordflow">goto</span> CLEANUP;
+        <span class="keywordflow">if</span>( <a class="codeRef" doxygen="mdis_api.tag:../../../../../LIBSRC/MDIS_API/DOC/html/" href="../../../../../LIBSRC/MDIS_API/DOC/html/mdis__api_8c.html#a13">M_setstat</a>(path, M_MK_CH_CURRENT, 0) &lt; 0 ) <span class="keywordflow">goto</span> CLEANUP;
         <span class="keywordflow">for</span>( j=0; j&lt;6; j++)
         {
-            <span class="keywordflow">if</span>( M_write(path, 1 ) &lt; 0 ) <span class="keywordflow">goto</span> CLEANUP;
+            <span class="keywordflow">if</span>( <a class="codeRef" doxygen="mdis_api.tag:../../../../../LIBSRC/MDIS_API/DOC/html/" href="../../../../../LIBSRC/MDIS_API/DOC/html/mdis__api_8c.html#a11">M_write</a>(path, 1 ) &lt; 0 ) <span class="keywordflow">goto</span> CLEANUP;
             UOS_Delay( 120 );
         }
         <span class="comment">/* clear segments */</span>
-        <span class="keywordflow">if</span>( M_setstat(path, M_MK_CH_CURRENT, 0) &lt; 0) <span class="keywordflow">goto</span> CLEANUP;
+        <span class="keywordflow">if</span>( <a class="codeRef" doxygen="mdis_api.tag:../../../../../LIBSRC/MDIS_API/DOC/html/" href="../../../../../LIBSRC/MDIS_API/DOC/html/mdis__api_8c.html#a13">M_setstat</a>(path, M_MK_CH_CURRENT, 0) &lt; 0) <span class="keywordflow">goto</span> CLEANUP;
         <span class="keywordflow">for</span>( j=0; j&lt;6; j++)
         {
-            <span class="keywordflow">if</span>( M_write(path, 0 ) &lt; 0 ) <span class="keywordflow">goto</span> CLEANUP;
+            <span class="keywordflow">if</span>( <a class="codeRef" doxygen="mdis_api.tag:../../../../../LIBSRC/MDIS_API/DOC/html/" href="../../../../../LIBSRC/MDIS_API/DOC/html/mdis__api_8c.html#a11">M_write</a>(path, 0 ) &lt; 0 ) <span class="keywordflow">goto</span> CLEANUP;
             UOS_Delay( 120 );
         }
 
         <span class="comment">/* configuration - set non auto-increment mode */</span>
-        <span class="keywordflow">if</span>( M_setstat( path, M_MK_IO_MODE, M_IO_EXEC ) &lt; 0 ) <span class="keywordflow">goto</span> CLEANUP;
+        <span class="keywordflow">if</span>( <a class="codeRef" doxygen="mdis_api.tag:../../../../../LIBSRC/MDIS_API/DOC/html/" href="../../../../../LIBSRC/MDIS_API/DOC/html/mdis__api_8c.html#a13">M_setstat</a>( path, M_MK_IO_MODE, M_IO_EXEC ) &lt; 0 ) <span class="keywordflow">goto</span> CLEANUP;
 
         <span class="comment">/*---------------------------+  </span>
 <span class="comment">        |  rotate segments (II)      |</span>
@@ -191,13 +191,13 @@
         {
             <span class="keywordflow">for</span>(ch=0; ch&lt;6; ch++)
             {
-                <span class="keywordflow">if</span>( M_setstat(path, M_MK_CH_CURRENT, ch) &lt; 0 ) <span class="keywordflow">goto</span> CLEANUP;
+                <span class="keywordflow">if</span>( <a class="codeRef" doxygen="mdis_api.tag:../../../../../LIBSRC/MDIS_API/DOC/html/" href="../../../../../LIBSRC/MDIS_API/DOC/html/mdis__api_8c.html#a13">M_setstat</a>(path, M_MK_CH_CURRENT, ch) &lt; 0 ) <span class="keywordflow">goto</span> CLEANUP;
 
                 <span class="comment">/* set channel ch to 1 */</span>
-                <span class="keywordflow">if</span>( M_write(path, 1 ) &lt; 0 ) <span class="keywordflow">goto</span> CLEANUP;
+                <span class="keywordflow">if</span>( <a class="codeRef" doxygen="mdis_api.tag:../../../../../LIBSRC/MDIS_API/DOC/html/" href="../../../../../LIBSRC/MDIS_API/DOC/html/mdis__api_8c.html#a11">M_write</a>(path, 1 ) &lt; 0 ) <span class="keywordflow">goto</span> CLEANUP;
                 UOS_Delay( 120-(i*10+ch) );
                 <span class="comment">/* set channel ch to 0*/</span>
-                <span class="keywordflow">if</span>( M_write(path, 0 ) &lt; 0 ) <span class="keywordflow">goto</span> CLEANUP;
+                <span class="keywordflow">if</span>( <a class="codeRef" doxygen="mdis_api.tag:../../../../../LIBSRC/MDIS_API/DOC/html/" href="../../../../../LIBSRC/MDIS_API/DOC/html/mdis__api_8c.html#a11">M_write</a>(path, 0 ) &lt; 0 ) <span class="keywordflow">goto</span> CLEANUP;
             }
         }
     }<span class="comment">/* while(run--) */</span>
@@ -205,7 +205,7 @@
     <span class="comment">/*----------------------+  </span>
 <span class="comment">    | close the device      |</span>
 <span class="comment">    +-----------------------*/</span>
-    <span class="keywordflow">if</span>( M_close(path) &lt; 0) <span class="keywordflow">goto</span> CLEANUP;
+    <span class="keywordflow">if</span>( <a name="a8"></a><a class="codeRef" doxygen="mdis_api.tag:../../../../../LIBSRC/MDIS_API/DOC/html/" href="../../../../../LIBSRC/MDIS_API/DOC/html/mdis__api_8c.html#a9">M_close</a>(path) &lt; 0) <span class="keywordflow">goto</span> CLEANUP;
     printf(<span class="stringliteral">"\nDevice %s closed\n"</span>, devName);
 
     printf(<span class="stringliteral">"=&gt; OK\n"</span>);
@@ -225,7 +225,7 @@ CLEANUP:
 
    error = UOS_ErrnoGet();
 
-   printf(<span class="stringliteral">"*** %s ***\n"</span>,M_errstring( error ) );
+   printf(<span class="stringliteral">"*** %s ***\n"</span>,<a name="a9"></a><a class="codeRef" doxygen="mdis_api.tag:../../../../../LIBSRC/MDIS_API/DOC/html/" href="../../../../../LIBSRC/MDIS_API/DOC/html/m__errstr_8c.html#a0">M_errstring</a>( error ) );
 }
 
 
