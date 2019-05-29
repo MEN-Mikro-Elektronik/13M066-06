@@ -13,47 +13,26 @@
  *
  *     Required: libraries: mdis_api, usr_oss, usr_utl
  *     \switches WINNT
- */
- /*-------------------------------[ History ]--------------------------------
  *
- * $Log: m66_irq.c,v $
- * Revision 1.10  2010/09/01 13:10:22  UFranke
- * R: warning (dcc:1643): narrowing or signed-to-unsigned type
- * M: type casts
- *
- * Revision 1.9  2009/06/24 11:08:08  CRuff
- * R: new MDIS path type MDIS_PATH
- * M: changed type of filedescriptor for M_open to MDIS_PATH
- *
- * Revision 1.8  2009/05/08 09:42:08  dpfeuffer
- * R: sighdl() uses wrong calling convention under Windows
- * M: __MAPILIB keyword added to sighdl()
- *
- * Revision 1.7  2009/03/30 14:32:08  ufranke
- * cosmetics
- *
- * Revision 1.6  2008/09/17 18:15:10  CKauntz
- * R: No 64 bit support
- * M: Changed path and G_Path to INT32_OR_64 to support 64 bit OS
- *
- * Revision 1.5  2008/09/15 15:16:26  ufranke
- * R: diab compiler warnings
- * M: cosmetics
- *
- * Revision 1.3  2008/01/18 14:27:57  ufranke
- * cosmetics
- *
- * Revision 1.2  2006/10/18 10:07:55  ts
- * Bugfixes:
- * - UOS_SigExit() was called with Parameters
- * - removed several Compiler Warnings
- *
- * Revision 1.1  2005/05/09 11:37:15  dpfeuffer
- * Initial Revision
  *
  *---------------------------------------------------------------------------
- * (c) Copyright 2005..2009 by MEN mikro elektronik GmbH, Nuernberg, Germany 
+ * Copyright (c) 2005-2019, MEN Mikro Elektronik GmbH
  ****************************************************************************/
+
+ /*
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
 static char *RCSid="$Id: m66_irq.c,v 1.10 2010/09/01 13:10:22 UFranke Exp $\n";
 
 #include <MEN/men_typs.h>

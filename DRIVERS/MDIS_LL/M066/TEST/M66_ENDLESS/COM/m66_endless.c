@@ -12,39 +12,25 @@
  *     Required: -
  *     Switches: -
  *
- *-------------------------------[ History ]---------------------------------
- *
- * $Log: m66_endless.c,v $
- * Revision 1.8  2009/06/24 11:07:48  CRuff
- * R: new MDIS path type MDIS_PATH
- * M: changed type of filedescriptor for M_open to MDIS_PATH
- *
- * Revision 1.7  2009/03/30 14:31:41  ufranke
- * cosmetics
- *
- * Revision 1.6  2008/09/17 18:15:07  CKauntz
- * R: No 64 bit support
- * M: Changed fd to INT32_OR_64 to support 64 bit OS
- *
- * Revision 1.5  2008/09/15 15:05:56  ufranke
- * R: diab compiler warnings
- * M: cosmetics
- *
- * Revision 1.4  2008/01/18 14:27:40  ufranke
- * cosmetics
- *
- * Revision 1.3  2000/08/09 14:09:23  kp
- * c++ comments converted to ANSI-C
- *
- * Revision 1.2  1999/08/30 14:21:33  Schmidt
- * cosmetics
- *
- * Revision 1.1  1999/08/30 13:57:18  Schmidt
- * Initial Revision
  *
  *---------------------------------------------------------------------------
- * (c) Copyright 1999..2009 by MEN mikro elektronik GmbH, Nuernberg, Germany
+ * Copyright (c) 1999-2019, MEN Mikro Elektronik GmbH
  ****************************************************************************/
+
+ /*
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
 
 static char *RCSid="$Id: m66_endless.c,v 1.8 2009/06/24 11:07:48 CRuff Exp $\n";
 
