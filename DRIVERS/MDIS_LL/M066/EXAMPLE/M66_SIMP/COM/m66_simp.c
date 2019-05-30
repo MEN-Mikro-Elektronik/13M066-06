@@ -4,8 +4,6 @@
  *      Project: MDIS 4.x
  *
  *       Author: uf
- *        $Date: 2009/06/24 11:07:33 $
- *    $Revision: 1.12 $
  *
  *  Description: simple test of the m66 mdis driver
  *
@@ -31,7 +29,6 @@
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-static char *RCSid="$Id: m66_simp.c,v 1.12 2009/06/24 11:07:33 CRuff Exp $\n";
 
 #include <MEN/men_typs.h>
 
@@ -43,6 +40,8 @@ static char *RCSid="$Id: m66_simp.c,v 1.12 2009/06/24 11:07:33 CRuff Exp $\n";
 #include <MEN/mdis_err.h>
 
 #include <MEN/m66_drv.h>
+
+static const char IdentString[]=MENT_XSTR(MAK_REVISION);
 
 /*-----------------------------------------+
 |  TYPEDEFS                                |
@@ -135,7 +134,7 @@ static int M66_Simple( char *devName )
     int32  i;
 
     printf("=========================\n");
-    printf("%s", RCSid );
+    printf("%s", IdentString );
     printf("M_open\n");
     if( (path = M_open(devName)) < 0 ) goto M66_TESTERR;
 

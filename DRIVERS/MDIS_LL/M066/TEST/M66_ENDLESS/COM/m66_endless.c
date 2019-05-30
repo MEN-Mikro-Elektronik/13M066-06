@@ -4,8 +4,6 @@
  *      Project: MDIS 4.x
  *
  *       Author: ds
- *        $Date: 2009/06/24 11:07:48 $
- *    $Revision: 1.8 $
  *
  *  Description: Endless test of the m66 mdis driver
  *
@@ -32,7 +30,6 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-static char *RCSid="$Id: m66_endless.c,v 1.8 2009/06/24 11:07:48 CRuff Exp $\n";
 
 #include <MEN/men_typs.h>
 
@@ -45,6 +42,8 @@ static char *RCSid="$Id: m66_endless.c,v 1.8 2009/06/24 11:07:48 CRuff Exp $\n";
 #include <MEN/mdis_err.h>
 
 #include <MEN/m66_drv.h>
+
+static const char IdentString[]=MENT_XSTR(MAK_REVISION);
 
 /*-----------------------------------------+
 |  PROTOTYPES                              |
@@ -98,7 +97,7 @@ int main( int argc, char *argv[ ] )
     }
     
     printf("=========================\n");
-    printf("%s", RCSid );
+    printf("%s", IdentString );
     printf("M_open(%s)\n", argv[1]);
     if( (path = M_open(argv[1])) < 0 ) goto M66_ERR;
 

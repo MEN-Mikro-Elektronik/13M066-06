@@ -6,8 +6,6 @@
 /*!  
  *         \file m66_irq.c
  *       \author dieter.pfeuffer@men.de
- *        $Date: 2010/09/01 13:10:22 $
- *    $Revision: 1.10 $
  *
  *        \brief Test program for interrupt handling of the M66 driver 
  *
@@ -33,7 +31,6 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-static char *RCSid="$Id: m66_irq.c,v 1.10 2010/09/01 13:10:22 UFranke Exp $\n";
 
 #include <MEN/men_typs.h>
 
@@ -46,6 +43,8 @@ static char *RCSid="$Id: m66_irq.c,v 1.10 2010/09/01 13:10:22 UFranke Exp $\n";
 #include <MEN/mdis_api.h>
 #include <MEN/mdis_err.h>
 #include <MEN/m66_drv.h>
+
+static const char IdentString[]=MENT_XSTR(MAK_REVISION);
 
 /*--------------------------------------+
 |   DEFINES                             |
@@ -116,8 +115,8 @@ static void usage(void)
 	printf("                 2 = M_BUF_RINGBUF\n");
 	printf("                 3 = M_BUF_RINGBUF_OVERWR\n");
 	printf("\n");
-	printf("%s\n", RCSid );
-	printf("(c) MEN mikro elektronik GmbH\n\n");
+	printf("Copyright (c) 2005-2019, MEN Mikro Elektronik GmbH\n\n");
+	printf("%s\n", IdentString );
 }
 
 /********************************* main ************************************/

@@ -5,8 +5,6 @@
  ***************************************************************************/
 /*!
  *       \author ds
- *        $Date: 2009/07/06 13:31:23 $
- *    $Revision: 1.11 $
  *
  *		  \brief Demonstration program for M66 with demo adapter
  *
@@ -32,7 +30,6 @@
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-static char *RCSid="$Id: m66_demo.c,v 1.11 2009/07/06 13:31:23 CRuff Exp $";
 
 #include <MEN/men_typs.h>
 
@@ -42,6 +39,8 @@ static char *RCSid="$Id: m66_demo.c,v 1.11 2009/07/06 13:31:23 CRuff Exp $";
 #include <MEN/usr_oss.h>
 #include <MEN/mdis_api.h>
 #include <MEN/mdis_err.h>
+
+static const char IdentString[]=MENT_XSTR(MAK_REVISION);
 
 /*-----------------------------------------+
 |  BACKWARD COMPATIBILITY TO MDIS4         |
@@ -122,7 +121,7 @@ static int M66_Demo( char *devName )
 	printf("m66_demo - demonstration program for the M66 module\n");
     printf("===================================================\n\n");
 
-    printf("%s\n\n", RCSid);
+    printf("%s\n\n", IdentString);
 
 	/*---------------------------+  
     | open the device            |

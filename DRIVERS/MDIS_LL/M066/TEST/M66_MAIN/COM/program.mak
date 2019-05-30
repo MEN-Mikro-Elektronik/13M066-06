@@ -1,12 +1,9 @@
 #***************************  M a k e f i l e  *******************************
 #
 #         Author: franke
-#          $Date: 2004/08/30 15:43:51 $
-#      $Revision: 1.2 $
-#        $Header: r:/./COM/DRIVERS/MDIS_LL/M066/TEST/M66_MAIN/COM/program.mak,v 1.2 2004/08/30 15:43:51 dpfeuffer Exp $
 #
 #    Description: makefile descriptor file for common
-#                 modules MDIS 4.x   e.g. low level driver
+#                 modules  e.g. low level driver
 #
 #-----------------------------------------------------------------------------
 #   Copyright (c) 1998-2019, MEN Mikro Elektronik GmbH
@@ -25,6 +22,11 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 MAK_NAME=m66_main
+# the next line is updated during the MDIS installation
+STAMPED_REVISION="13M066-06_02_23-15-g4cac87f-dirty_2019-05-30"
+
+DEF_REVISION=MAK_REVISION=$(STAMPED_REVISION)
+MAK_SWITCH=$(SW_PREFIX)$(DEF_REVISION)
 
 MAK_LIBS=$(LIB_PREFIX)$(MEN_LIB_DIR)/mdis_api$(LIB_SUFFIX)    \
          $(LIB_PREFIX)$(MEN_LIB_DIR)/usr_oss$(LIB_SUFFIX)     \

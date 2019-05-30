@@ -1,9 +1,6 @@
 #***************************  M a k e f i l e  *******************************
 #
 #         Author: kp
-#          $Date: 2004/08/30 15:43:28 $
-#      $Revision: 1.2 $
-#            $Id: driver_sw.mak,v 1.2 2004/08/30 15:43:28 dpfeuffer Exp $
 #
 #    Description: makefile for M66 LL driver, swapped variant
 #
@@ -24,8 +21,13 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 MAK_NAME=m66_sw
+# the next line is updated during the MDIS installation
+STAMPED_REVISION="13M066-06_02_23-15-g4cac87f-dirty_2019-05-30"
+
+DEF_REVISION=MAK_REVISION=$(STAMPED_REVISION)
 
 MAK_SWITCH=$(SW_PREFIX)MAC_MEM_MAPPED \
+		$(SW_PREFIX)$(DEF_REVISION) \
 		   $(SW_PREFIX)MAC_BYTESWAP   \
 		   $(SW_PREFIX)M66_VARIANT=M66_SW \
            $(SW_PREFIX)ID_SW

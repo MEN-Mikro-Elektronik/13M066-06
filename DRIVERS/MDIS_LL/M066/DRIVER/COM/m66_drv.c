@@ -1,11 +1,9 @@
 /*********************  P r o g r a m  -  M o d u l e **********************/
 /*!
  *         \file m66_drv.c
- *      Project: M66 module driver (MDIS V4.x)
+ *      Project: M66 module driver 
  *
  *       \author franke
- *        $Date: 2010/09/21 17:43:04 $
- *    $Revision: 1.16 $
  *
  *		  \brief Low level driver for M66 M-Modules
  *
@@ -33,8 +31,6 @@
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-static const char IdentString[]="M66 - m66 low level driver: $Id: m66_drv.c,v 1.16 2010/09/21 17:43:04 ts Exp $";
-
 #include <MEN/men_typs.h>   /* system dependend definitions   */
 #ifndef INT32_OR_64
 	#define INT32_OR_64		int32  /* for backward compatibility with old system packages */
@@ -53,6 +49,8 @@ static const char IdentString[]="M66 - m66 low level driver: $Id: m66_drv.c,v 1.
 #include <MEN/ll_defs.h>    /* low level driver definitions   */
 #include <MEN/ll_entry.h>   /* low level driver entry struct  */
 #include <MEN/m66_drv.h>    /* M66 driver header file         */
+
+static const char IdentString[]=MENT_XSTR(MAK_REVISION);
 
 #include "m66_flex.h"                       /* include data field */
 

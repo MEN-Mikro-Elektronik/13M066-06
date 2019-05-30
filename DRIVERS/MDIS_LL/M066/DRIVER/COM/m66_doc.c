@@ -3,8 +3,6 @@
  *        \file  m66_doc.c
  *
  *      \author  ck
- *        $Date: 2008/09/18 09:20:11 $
- *    $Revision: 1.1 $
  *
  *      \brief   User documentation for M66 module driver
  *

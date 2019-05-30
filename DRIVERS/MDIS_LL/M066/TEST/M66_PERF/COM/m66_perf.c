@@ -4,8 +4,6 @@
  *      Project: MDIS 4.x
  *
  *       Author: ds
- *        $Date: 2010/03/26 14:55:30 $
- *    $Revision: 1.9 $
  *
  *  Description: performance test for m66 mdis driver
  *
@@ -30,7 +28,6 @@
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-static char *RCSid="$Id: m66_perf.c,v 1.9 2010/03/26 14:55:30 dpfeuffer Exp $\n";
 
 #include <MEN/men_typs.h>
 
@@ -43,6 +40,8 @@ static char *RCSid="$Id: m66_perf.c,v 1.9 2010/03/26 14:55:30 dpfeuffer Exp $\n"
 #include <MEN/mdis_err.h>
 #include <MEN/usr_utl.h>
 #include <MEN/m66_drv.h>
+
+static const char IdentString[]=MENT_XSTR(MAK_REVISION);
 
 /*-----------------------------------------+
 |  DEFINES                                 |
@@ -85,7 +84,7 @@ static void usage(void)
 	printf("    device       device name (M66)     [none]\n");
 	printf("    -c=<n>       nr of function calls  [%d]\n",CALLS);   
 	printf("\n");
-	printf("(c) 2000-2010 by MEN mikro elektronik GmbH\n%s\n\n",RCSid);
+	printf("Copyright (c) 2000-2019, MEN Mikro Elektronik GmbH\n%s\n\n",IdentString);
 }
 
 /******************************** main **************************************

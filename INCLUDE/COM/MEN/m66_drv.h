@@ -2,9 +2,7 @@
  *
  *         Name: m66_driver.h
  *
- *      $Author: CRuff $
- *        $Date: 2009/06/30 11:51:03 $
- *    $Revision: 1.5 $
+ *      Author: CRuff 
  *
  *  Description: Header file for M66 driver modules
  *               - M66 specific status codes

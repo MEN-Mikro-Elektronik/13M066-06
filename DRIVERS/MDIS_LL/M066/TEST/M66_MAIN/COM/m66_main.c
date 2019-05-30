@@ -4,8 +4,6 @@
  *      Project: MDIS 4.x
  *
  *       Author: franke
- *        $Date: 2009/06/24 11:09:32 $
- *    $Revision: 1.13 $
  *
  *  Description: test of the m66_drv.c m66_drv.h
  *               signal handling and buffer modes
@@ -41,7 +39,6 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-static char *RCSid="$Id: m66_main.c,v 1.13 2009/06/24 11:09:32 CRuff Exp $";
 
 #include <MEN/men_typs.h>
 
@@ -53,6 +50,8 @@ static char *RCSid="$Id: m66_main.c,v 1.13 2009/06/24 11:09:32 CRuff Exp $";
 #include <MEN/mdis_api.h>
 
 #include <MEN/m66_drv.h>
+
+static const char IdentString[]=MENT_XSTR(MAK_REVISION);
 
 /*-----------------------------------------+
 |  TYPEDEFS                                |
@@ -249,7 +248,7 @@ static int m66_openclose( char *devName )
    u_int32 i;
    u_int32 maxWords;
 
-   printf("%s\n", RCSid);
+   printf("%s\n", IdentString);
    printf("=========================\n");
    printf("m66 - open close \n");
    printf("    open\n");
