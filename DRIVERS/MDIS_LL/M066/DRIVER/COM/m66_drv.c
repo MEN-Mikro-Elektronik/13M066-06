@@ -194,7 +194,7 @@ static char* M66_Ident( void )
  ****************************************************************************/
 static char* M66_FlexDataIdent( void )	
 {
-    return( (char*)FlexIdentString );
+    return( (char*)IdentString );
 }/*M66_FlexDataIdent*/
 
 /******************************** m66_flexload ******************************/

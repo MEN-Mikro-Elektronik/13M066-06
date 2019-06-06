@@ -1,5 +1,3 @@
-static const char FlexIdentString[]="M66 - m66 flex data (m66_28r1.bin): $Id: m66_flex.h,v 1.4 2002/01/17 08:10:37 kp Exp $";
-
 /* m66_flex: 8107+4 data bytes (M66-28r1.bin) */
 static const u_int8 m66_flex[] = {
 /* size */
