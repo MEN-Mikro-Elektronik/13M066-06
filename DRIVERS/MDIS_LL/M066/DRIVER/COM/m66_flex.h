@@ -1,5 +1,5 @@
 /*
- *  FPGA code that is loaded into FPGAs by the driver
+ *  Code that is loaded into a PLD by the driver
  *
  *  Copyright 2019 MEN Mikro Elektronik GmbH
  *
