@@ -1,3 +1,13 @@
+/*
+ *  Code that is loaded into a PLD by the driver
+ *
+ *  Copyright 2019 MEN Mikro Elektronik GmbH
+ *
+ *  This binary code is not part of the driver and proprietary.
+ *  Reproduction and distribution is permitted for all customers
+ *  of MEN Mikro Elektronik GmbH.
+ */
+
 /* m66_flex: 8107+4 data bytes (M66-28r1.bin) */
 static const u_int8 m66_flex[] = {
 /* size */
