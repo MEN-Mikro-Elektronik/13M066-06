@@ -27,8 +27,6 @@
 <span class="comment"> *      Project: MDIS 4.x</span>
 <span class="comment"> *</span>
 <span class="comment"> *       Author: uf</span>
-<span class="comment"> *        $Date: 2009/06/24 11:07:33 $</span>
-<span class="comment"> *    $Revision: 1.12 $</span>
 <span class="comment"> *</span>
 <span class="comment"> *  Description: simple test of the m66 mdis driver</span>
 <span class="comment"> *</span>
@@ -54,7 +52,6 @@
 <span class="comment">* along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span>
 <span class="comment">*/</span>
 
-<span class="keyword">static</span> <span class="keywordtype">char</span> *RCSid=<span class="stringliteral">"$Id: m66_simp.c,v 1.12 2009/06/24 11:07:33 CRuff Exp $\n"</span>;
 
 <span class="preprocessor">#include &lt;MEN/men_typs.h&gt;</span>
 
@@ -66,6 +63,8 @@
 <span class="preprocessor">#include &lt;MEN/mdis_err.h&gt;</span>
 
 <span class="preprocessor">#include &lt;<a class="code" href="m66__drv_8h.html">MEN/m66_drv.h</a>&gt;</span>
+
+<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> IdentString[]=MENT_XSTR(MAK_REVISION);
 
 <span class="comment">/*-----------------------------------------+</span>
 <span class="comment">|  TYPEDEFS                                |</span>
@@ -158,7 +157,7 @@
     int32  i;
 
     printf(<span class="stringliteral">"=========================\n"</span>);
-    printf(<span class="stringliteral">"%s"</span>, RCSid );
+    printf(<span class="stringliteral">"%s"</span>, IdentString );
     printf(<span class="stringliteral">"M_open\n"</span>);
     <span class="keywordflow">if</span>( (path = <a name="a14"></a><a class="codeRef" doxygen="mdis_api.tag:../../../../../LIBSRC/MDIS_API/DOC/html/" href="../../../../../LIBSRC/MDIS_API/DOC/html/mdis__api_8c.html#a4">M_open</a>(devName)) &lt; 0 ) <span class="keywordflow">goto</span> M66_TESTERR;
 
@@ -212,8 +211,7 @@ M66_TESTERR:
 <div class="footer">
 <!-- Footer -->
 	<p class="footer">
-	Generated for M66 MDIS Driver using <a href="http://www.doxygen.org">doxygen</a>.<br>
-	Copyright &copy; 2019 <a href="http://www.men.de">MEN Mikro Elektronik GmbH</a>. All Rights Reserved.
+	Generated for M66 MDIS Driver using <a href="http://www.doxygen.org">doxygen</a>. All Rights Reserved.
 	</p>
 </div>
 

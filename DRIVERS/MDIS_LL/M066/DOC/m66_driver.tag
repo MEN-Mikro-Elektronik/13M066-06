@@ -46,10 +46,10 @@
       <arglist>(int argc, char *argv[])</arglist>
     </member>
     <member kind="variable" static="yes">
-      <type>char *</type>
-      <name>RCSid</name>
+      <type>const char</type>
+      <name>IdentString</name>
       <anchor>a2</anchor>
-      <arglist></arglist>
+      <arglist>[]</arglist>
     </member>
   </compound>
   <compound kind="file">
@@ -475,10 +475,10 @@
       <arglist>(int argc, char *argv[])</arglist>
     </member>
     <member kind="variable" static="yes">
-      <type>char *</type>
-      <name>RCSid</name>
+      <type>const char</type>
+      <name>IdentString</name>
       <anchor>a0</anchor>
-      <arglist></arglist>
+      <arglist>[]</arglist>
     </member>
   </compound>
   <compound kind="file">
@@ -486,15 +486,9 @@
     <path>/opt/menlinux/DRIVERS/MDIS_LL/M066/DRIVER/COM/</path>
     <filename>m66__flex_8h</filename>
     <member kind="variable" static="yes">
-      <type>const char</type>
-      <name>FlexIdentString</name>
-      <anchor>a0</anchor>
-      <arglist>[]</arglist>
-    </member>
-    <member kind="variable" static="yes">
       <type>const u_int8</type>
       <name>m66_flex</name>
-      <anchor>a1</anchor>
+      <anchor>a0</anchor>
       <arglist>[]</arglist>
     </member>
   </compound>
@@ -551,10 +545,10 @@
       <arglist>(int argc, char *argv[])</arglist>
     </member>
     <member kind="variable" static="yes">
-      <type>char *</type>
-      <name>RCSid</name>
+      <type>const char</type>
+      <name>IdentString</name>
       <anchor>a3</anchor>
-      <arglist></arglist>
+      <arglist>[]</arglist>
     </member>
     <member kind="variable" static="yes">
       <type>u_int32</type>
@@ -628,10 +622,10 @@
       <arglist>(char *devName)</arglist>
     </member>
     <member kind="variable" static="yes">
-      <type>char *</type>
-      <name>RCSid</name>
+      <type>const char</type>
+      <name>IdentString</name>
       <anchor>a0</anchor>
-      <arglist></arglist>
+      <arglist>[]</arglist>
     </member>
     <member kind="variable" static="yes">
       <type>const int32</type>
@@ -699,10 +693,10 @@
       <arglist>(int argc, char *argv[])</arglist>
     </member>
     <member kind="variable" static="yes">
-      <type>char *</type>
-      <name>RCSid</name>
+      <type>const char</type>
+      <name>IdentString</name>
       <anchor>a1</anchor>
-      <arglist></arglist>
+      <arglist>[]</arglist>
     </member>
   </compound>
   <compound kind="file">
@@ -728,10 +722,10 @@
       <arglist>(int argc, char *argv[])</arglist>
     </member>
     <member kind="variable" static="yes">
-      <type>char *</type>
-      <name>RCSid</name>
+      <type>const char</type>
+      <name>IdentString</name>
       <anchor>a0</anchor>
-      <arglist></arglist>
+      <arglist>[]</arglist>
     </member>
   </compound>
   <compound kind="struct">
