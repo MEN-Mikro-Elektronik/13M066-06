@@ -159,24 +159,6 @@
 
     </table>
 
-    \subsection m66_min   Minimum descriptor
-    m66_min.dsc
-    Demonstrates the minimum set of options necessary for using the driver.
-
-    \subsection m66_max   Maximum descriptor
-    m66_max.dsc
-    Shows all possible configuration options for this driver.
-
- 	\subsection m66_sw_min   Minimum descriptor for swapped version
-    m66_sw_min.dsc
-    Demonstrates the minimum set of options necessary for using the driver
-    at boards that need the swapped driver version.
-
-    \subsection m66_sw_max   Maximum descriptor for swapped version
-    m66_sw_max.dsc
-    Shows all possible configuration options for this driver at boards
-    that need the swapped driver version.
-
     \n \section programs Overview of provided programs
 
     \subsection m66_simp  Simple example for using the driver
@@ -204,10 +186,6 @@
 
 /** \example m66_simp.c */
 /** \example m66_demo.c */
-/** \example m66_min.dsc */
-/** \example m66_max.dsc */
-/** \example m66_sw_min.dsc */
-/** \example m66_sw_max.dsc */
 
 /*! \page m66dummy MEN logo
   \menimages
