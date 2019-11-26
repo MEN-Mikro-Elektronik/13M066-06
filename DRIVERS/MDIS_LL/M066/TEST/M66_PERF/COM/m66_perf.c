@@ -11,7 +11,7 @@
  *     Switches: -
  *
  *---------------------------------------------------------------------------
- * Copyright (c) 2000-2019, MEN Mikro Elektronik GmbH
+ * Copyright 2000-2019, MEN Mikro Elektronik GmbH
  ****************************************************************************/
 /*
 * This program is free software: you can redistribute it and/or modify
@@ -84,7 +84,7 @@ static void usage(void)
 	printf("    device       device name (M66)     [none]\n");
 	printf("    -c=<n>       nr of function calls  [%d]\n",CALLS);   
 	printf("\n");
-	printf("Copyright (c) 2000-2019, MEN Mikro Elektronik GmbH\n%s\n\n",IdentString);
+	printf("Copyright 2000-2019, MEN Mikro Elektronik GmbH\n%s\n\n",IdentString);
 }
 
 /******************************** main **************************************

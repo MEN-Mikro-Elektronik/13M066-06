@@ -14,7 +14,7 @@
  *
  *
  *---------------------------------------------------------------------------
- * Copyright (c) 2005-2019, MEN Mikro Elektronik GmbH
+ * Copyright 2005-2019, MEN Mikro Elektronik GmbH
  ****************************************************************************/
 
  /*
@@ -115,7 +115,7 @@ static void usage(void)
 	printf("                 2 = M_BUF_RINGBUF\n");
 	printf("                 3 = M_BUF_RINGBUF_OVERWR\n");
 	printf("\n");
-	printf("Copyright (c) 2005-2019, MEN Mikro Elektronik GmbH\n\n");
+	printf("Copyright 2005-2019, MEN Mikro Elektronik GmbH\n\n");
 	printf("%s\n", IdentString );
 }
 

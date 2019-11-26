@@ -5,7 +5,7 @@
 #    Description: Makefile definitions for M66_IRQ test program
 #
 #-----------------------------------------------------------------------------
-#   Copyright (c) 2019, MEN Mikro Elektronik GmbH
+#   Copyright 2019, MEN Mikro Elektronik GmbH
 #*****************************************************************************
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
